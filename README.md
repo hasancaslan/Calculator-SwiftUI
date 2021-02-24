@@ -1,3 +1,6 @@
+<p align="center">
+    <img src="https://github.com/hasancaslan/Calculator-SwiftUI/blob/master/Calculator/Resources/Assets.xcassets/AppIcon.appiconset/Icon.png" width=120>
+</p>
 # Calculator SwiftUI
  A simple and native like iOS calculator, developed with SwiftUI.
 
