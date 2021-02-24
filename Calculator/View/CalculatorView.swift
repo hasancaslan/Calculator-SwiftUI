@@ -9,13 +9,13 @@ import SwiftUI
 
 struct CalculatorView: View {
     @EnvironmentObject var model: CalculatorModel
-    
+
     let spacing: CGFloat = 14
-    
+
     var body: some View {
         ZStack(alignment: .bottom) {
             Color.black.edgesIgnoringSafeArea(.all)
-            
+
             VStack(spacing: self.spacing) {
                 HStack {
                     Spacer()
@@ -23,7 +23,7 @@ struct CalculatorView: View {
                         .foregroundColor(.white)
                         .font(.system(size: 90, weight: .thin))
                 }.padding(.horizontal, 24)
-                
+
                 CalculatorButtonPad(spacing: spacing)
             }.padding(.bottom, 40)
         }

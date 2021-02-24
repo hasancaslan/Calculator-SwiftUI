@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CalculatorButtonPad: View {
     let spacing: CGFloat
-    
+
     let pad: [[CalculatorButtonItem]] = [
         [.command(.clear), .command(.flip), .command(.percent), .op(.divide)],
         [.digit(7), .digit(8), .digit(9), .op(.multiply)],
@@ -18,7 +18,7 @@ struct CalculatorButtonPad: View {
         [.digit(1), .digit(2), .digit(3), .op(.plus)],
         [.digit(0), .dot, .op(.equal)]
     ]
-    
+
     var body: some View {
         VStack(spacing: spacing) {
             ForEach(pad, id: \.self) { row in

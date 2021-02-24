@@ -11,7 +11,7 @@ import SwiftUI
 struct CalculatorButtonView: View {
     var buttonItem: CalculatorButtonItem
     @EnvironmentObject var model: CalculatorModel
-    
+
     var body: some View {
         Button(buttonItem.title, action: {
             self.model.apply(buttonItem)

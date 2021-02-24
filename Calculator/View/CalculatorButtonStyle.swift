@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CalculatorButtonStyle: ButtonStyle {
     var buttonItem: CalculatorButtonItem
-    
+
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .frame(width: self.buttonItem.size.width, height: self.buttonItem.size.height, alignment: .center)
