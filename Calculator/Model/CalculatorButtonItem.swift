@@ -9,7 +9,12 @@ import Foundation
 import SwiftUI
 
 enum CalculatorButtonItem {
-    enum Op: String {
+    case digit(Int)
+    case dot
+    case operand(Operand)
+    case command(Command)
+
+    enum Operand: String {
         case plus = "+"
         case minus = "-"
         case multiply = "×"
@@ -22,25 +27,20 @@ enum CalculatorButtonItem {
         case flip = "±"
         case percent = "%"
     }
-
-    case digit(Int)
-    case dot
-    case op(Op)
-    case command(Command)
 }
 
 extension CalculatorButtonItem {
     var title: String {
         switch self {
-        case .digit(let value):
+        case let .digit(value):
             return String(value)
 
         case .dot:
             return "."
-        case .op(let op):
-            return op.rawValue
+        case let .operand(operand):
+            return operand.rawValue
 
-        case .command(let command):
+        case let .command(command):
             return command.rawValue
         }
     }
@@ -53,7 +53,7 @@ extension CalculatorButtonItem {
         let width = (UIScreen.main.bounds.width - 5 * spacing) / 4
 
         switch self {
-        case .digit(let value):
+        case let .digit(value):
             if value == 0 {
                 return CGSize(width: width * 2 + spacing, height: width)
             }
@@ -70,7 +70,7 @@ extension CalculatorButtonItem {
         case .command:
             return Color(red: 0.647, green: 0.647, blue: 0.647)
 
-        case .op:
+        case .operand:
             return Color(red: 0.941, green: 0.600, blue: 0.216)
 
         case .digit, .dot:
@@ -93,7 +93,7 @@ extension CalculatorButtonItem {
         case .command:
             return .system(size: 32)
 
-        case .op:
+        case .operand:
             return .system(size: 42)
 
         default:
@@ -107,10 +107,17 @@ extension CalculatorButtonItem: Hashable {}
 extension CalculatorButtonItem: CustomStringConvertible {
     var description: String {
         switch self {
-        case .digit(let num): return String(num)
-        case .dot: return "."
-        case .op(let op): return op.rawValue
-        case .command(let command): return command.rawValue
+        case let .digit(num):
+            return String(num)
+
+        case .dot:
+            return "."
+
+        case let .operand(operand):
+            return operand.rawValue
+
+        case let .command(command):
+            return command.rawValue
         }
     }
 }

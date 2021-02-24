@@ -17,7 +17,7 @@
 		F3685B9625DC0D80008E8894 /* CalculatorButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3685B9525DC0D80008E8894 /* CalculatorButtonItem.swift */; };
 		F3685B9D25DC1392008E8894 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3685B9C25DC1392008E8894 /* CalculatorModel.swift */; };
 		F3685BA025DC13B1008E8894 /* CalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3685B9F25DC13B1008E8894 /* CalculatorLogic.swift */; };
-		F3685BA425DC144A008E8894 /* CalculatorPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3685BA325DC144A008E8894 /* CalculatorPad.swift */; };
+		F3685BA425DC144A008E8894 /* CalculatorButtonPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3685BA325DC144A008E8894 /* CalculatorButtonPad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		F3685B9525DC0D80008E8894 /* CalculatorButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonItem.swift; sourceTree = "<group>"; };
 		F3685B9C25DC1392008E8894 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		F3685B9F25DC13B1008E8894 /* CalculatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLogic.swift; sourceTree = "<group>"; };
-		F3685BA325DC144A008E8894 /* CalculatorPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorPad.swift; sourceTree = "<group>"; };
+		F3685BA325DC144A008E8894 /* CalculatorButtonPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonPad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 		F3C4963C25DC5C5900FDDB50 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F3685BA325DC144A008E8894 /* CalculatorPad.swift */,
+				F3685BA325DC144A008E8894 /* CalculatorButtonPad.swift */,
 				F3685B9125DC0B5F008E8894 /* CalculatorButtonView.swift */,
 				F305E71525DBBD1C0073964F /* CalculatorButtonStyle.swift */,
 				F305E70125DBA8970073964F /* CalculatorView.swift */,
@@ -186,7 +186,7 @@
 				F305E6FE25DBA8970073964F /* AppDelegate.swift in Sources */,
 				F3685B9625DC0D80008E8894 /* CalculatorButtonItem.swift in Sources */,
 				F3685BA025DC13B1008E8894 /* CalculatorLogic.swift in Sources */,
-				F3685BA425DC144A008E8894 /* CalculatorPad.swift in Sources */,
+				F3685BA425DC144A008E8894 /* CalculatorButtonPad.swift in Sources */,
 				F305E70025DBA8970073964F /* SceneDelegate.swift in Sources */,
 				F3685B9D25DC1392008E8894 /* CalculatorModel.swift in Sources */,
 				F305E70225DBA8970073964F /* CalculatorView.swift in Sources */,

@@ -9,51 +9,58 @@ import Foundation
 
 enum CalculatorLogic {
     case left(String)
-    case leftOp(left: String, op: CalculatorButtonItem.Op)
-    case leftOpRight(left: String, op: CalculatorButtonItem.Op, right: String)
+    case leftOp(left: String, operand: CalculatorButtonItem.Operand)
+    case leftOpRight(left: String, operand: CalculatorButtonItem.Operand, right: String)
     case error
+
+    var output: String {
+        let result: String
+        switch self {
+        case let .left(left):
+            result = left
+
+        case let .leftOp(left, _):
+            result = left
+
+        case let .leftOpRight(_, _, right):
+            result = right
+
+        case .error:
+            return "Error"
+        }
+
+        guard let value = Double(result) else { return "Error" }
+
+        return formatter.string(from: value as NSNumber)!
+    }
 
     @discardableResult
     func apply(item: CalculatorButtonItem) -> CalculatorLogic {
         switch item {
-        case .digit(let num):
+        case let .digit(num):
             return apply(num: num)
 
         case .dot:
             return applyDot()
 
-        case .op(let op):
-            return apply(op: op)
+        case let .operand(operand):
+            return apply(operand: operand)
 
-        case .command(let command):
+        case let .command(command):
             return apply(command: command)
         }
     }
 
-    var output: String {
-        let result: String
-        switch self {
-        case .left(let left): result = left
-        case .leftOp(let left, _): result = left
-        case .leftOpRight(_, _, let right): result = right
-        case .error: return "Error"
-        }
-        guard let value = Double(result) else {
-            return "Error"
-        }
-        return formatter.string(from: value as NSNumber)!
-    }
-
     private func apply(num: Int) -> CalculatorLogic {
         switch self {
-        case .left(let left):
+        case let .left(left):
             return .left(left.apply(num: num))
 
-        case .leftOp(let left, let op):
-            return .leftOpRight(left: left, op: op, right: "0".apply(num: num))
+        case let .leftOp(left, operand):
+            return .leftOpRight(left: left, operand: operand, right: "0".apply(num: num))
 
-        case .leftOpRight(let left, let op, let right):
-            return .leftOpRight(left: left, op: op, right: right.apply(num: num))
+        case let .leftOpRight(left, operand, right):
+            return .leftOpRight(left: left, operand: operand, right: right.apply(num: num))
 
         case .error:
             return .left("0".apply(num: num))
@@ -62,55 +69,55 @@ enum CalculatorLogic {
 
     private func applyDot() -> CalculatorLogic {
         switch self {
-        case .left(let left):
+        case let .left(left):
             return .left(left.applyDot())
 
-        case .leftOp(let left, let op):
-            return .leftOpRight(left: left, op: op, right: "0".applyDot())
+        case let .leftOp(left, operand):
+            return .leftOpRight(left: left, operand: operand, right: "0".applyDot())
 
-        case .leftOpRight(let left, let op, let right):
-            return .leftOpRight(left: left, op: op, right: right.applyDot())
+        case let .leftOpRight(left, operand, right):
+            return .leftOpRight(left: left, operand: operand, right: right.applyDot())
 
         case .error:
             return .left("0".applyDot())
         }
     }
 
-    private func apply(op: CalculatorButtonItem.Op) -> CalculatorLogic {
+    private func apply(operand: CalculatorButtonItem.Operand) -> CalculatorLogic {
         switch self {
-        case .left(let left):
-            switch op {
+        case let .left(left):
+            switch operand {
             case .plus, .minus, .multiply, .divide:
-                return .leftOp(left: left, op: op)
+                return .leftOp(left: left, operand: operand)
 
             case .equal:
                 return self
             }
 
-        case .leftOp(let left, let currentOp):
-            switch op {
+        case let .leftOp(left, currentOp):
+            switch operand {
             case .plus, .minus, .multiply, .divide:
-                return .leftOp(left: left, op: op)
+                return .leftOp(left: left, operand: operand)
 
             case .equal:
-                if let result = currentOp.calculate(l: left, r: left) {
-                    return .leftOp(left: result, op: currentOp)
+                if let result = currentOp.calculate(lhs: left, rhs: left) {
+                    return .leftOp(left: result, operand: currentOp)
                 } else {
                     return .error
                 }
             }
 
-        case .leftOpRight(let left, let currentOp, let right):
-            switch op {
+        case let .leftOpRight(left, currentOp, right):
+            switch operand {
             case .plus, .minus, .multiply, .divide:
-                if let result = currentOp.calculate(l: left, r: right) {
-                    return .leftOp(left: result, op: op)
+                if let result = currentOp.calculate(lhs: left, rhs: right) {
+                    return .leftOp(left: result, operand: operand)
                 } else {
                     return .error
                 }
 
             case .equal:
-                if let result = currentOp.calculate(l: left, r: right) {
+                if let result = currentOp.calculate(lhs: left, rhs: right) {
                     return .left(result)
                 } else {
                     return .error
@@ -129,14 +136,14 @@ enum CalculatorLogic {
 
         case .flip:
             switch self {
-            case .left(let left):
+            case let .left(left):
                 return .left(left.flipped())
 
-            case .leftOp(let left, let op):
-                return .leftOpRight(left: left, op: op, right: "-0")
+            case let .leftOp(left, operand):
+                return .leftOpRight(left: left, operand: operand, right: "-0")
 
-            case .leftOpRight(left: let left, let op, let right):
-                return .leftOpRight(left: left, op: op, right: right.flipped())
+            case let .leftOpRight(left: left, operand, right):
+                return .leftOpRight(left: left, operand: operand, right: right.flipped())
 
             case .error:
                 return .left("-0")
@@ -144,14 +151,14 @@ enum CalculatorLogic {
 
         case .percent:
             switch self {
-            case .left(let left):
+            case let .left(left):
                 return .left(left.percentaged())
 
             case .leftOp:
                 return self
 
-            case .leftOpRight(left: let left, let op, let right):
-                return .leftOpRight(left: left, op: op, right: right.percentaged())
+            case let .leftOpRight(left: left, operand, right):
+                return .leftOpRight(left: left, operand: operand, right: right.percentaged())
 
             case .error:
                 return .left("-0")
@@ -161,11 +168,11 @@ enum CalculatorLogic {
 }
 
 var formatter: NumberFormatter = {
-    let f = NumberFormatter()
-    f.minimumFractionDigits = 0
-    f.maximumFractionDigits = 8
-    f.numberStyle = .decimal
-    return f
+    let numbarFormatter = NumberFormatter()
+    numbarFormatter.minimumFractionDigits = 0
+    numbarFormatter.maximumFractionDigits = 8
+    numbarFormatter.numberStyle = .decimal
+    return numbarFormatter
 }()
 
 extension String {
@@ -187,9 +194,9 @@ extension String {
 
     func flipped() -> String {
         if startWithNegative {
-            var s = self
-            s.removeFirst()
-            return s
+            var selfVar = self
+            selfVar.removeFirst()
+            return selfVar
         } else {
             return "-\(self)"
         }
@@ -200,20 +207,28 @@ extension String {
     }
 }
 
-extension CalculatorButtonItem.Op {
-    func calculate(l: String, r: String) -> String? {
-        guard let left = Double(l), let right = Double(r) else {
-            return nil
-        }
+extension CalculatorButtonItem.Operand {
+    func calculate(lhs: String, rhs: String) -> String? {
+        guard let left = Double(lhs), let right = Double(rhs) else { return nil }
 
         let result: Double?
         switch self {
-        case .plus: result = left + right
-        case .minus: result = left - right
-        case .multiply: result = left * right
-        case .divide: result = right == 0 ? nil : left / right
-        case .equal: fatalError()
+        case .plus:
+            result = left + right
+
+        case .minus:
+            result = left - right
+
+        case .multiply:
+            result = left * right
+
+        case .divide:
+            result = right == 0 ? nil : left / right
+
+        case .equal:
+            fatalError()
         }
+
         return result.map { String($0) }
     }
 }
