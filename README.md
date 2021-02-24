@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/hasancaslan/Calculator-SwiftUI/blob/master/images/header.png" width=600>
+    <img src="https://github.com/hasancaslan/Calculator-SwiftUI/blob/master/images/header.png" width=1024>
 </p>
 
 # Calculator SwiftUI
