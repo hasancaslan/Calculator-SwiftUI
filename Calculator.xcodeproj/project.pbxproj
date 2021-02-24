@@ -9,69 +9,31 @@
 /* Begin PBXBuildFile section */
 		F305E6FE25DBA8970073964F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305E6FD25DBA8970073964F /* AppDelegate.swift */; };
 		F305E70025DBA8970073964F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305E6FF25DBA8970073964F /* SceneDelegate.swift */; };
-		F305E70225DBA8970073964F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305E70125DBA8970073964F /* ContentView.swift */; };
+		F305E70225DBA8970073964F /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305E70125DBA8970073964F /* CalculatorView.swift */; };
 		F305E70425DBA89A0073964F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F305E70325DBA89A0073964F /* Assets.xcassets */; };
 		F305E70725DBA89A0073964F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F305E70625DBA89A0073964F /* Preview Assets.xcassets */; };
-		F305E70A25DBA89A0073964F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F305E70825DBA89A0073964F /* LaunchScreen.storyboard */; };
 		F305E71625DBBD1C0073964F /* CalculatorButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305E71525DBBD1C0073964F /* CalculatorButtonStyle.swift */; };
-		F314782625E0112000D5F0E4 /* UserDefaultsPasscodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314781325E0112000D5F0E4 /* UserDefaultsPasscodeRepository.swift */; };
-		F314782725E0112100D5F0E4 /* ConfirmPasscodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314781425E0112000D5F0E4 /* ConfirmPasscodeState.swift */; };
-		F314782825E0112100D5F0E4 /* PasscodeLockConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314781525E0112000D5F0E4 /* PasscodeLockConfiguration.swift */; };
-		F314782925E0112100D5F0E4 /* ChangePasscodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314781625E0112000D5F0E4 /* ChangePasscodeState.swift */; };
-		F314782A25E0112100D5F0E4 /* RemovePasscodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314781725E0112000D5F0E4 /* RemovePasscodeState.swift */; };
-		F314782B25E0112100D5F0E4 /* SetPasscodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314781825E0112000D5F0E4 /* SetPasscodeState.swift */; };
-		F314782C25E0112100D5F0E4 /* PasscodeLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314781925E0112000D5F0E4 /* PasscodeLock.swift */; };
-		F314782D25E0112100D5F0E4 /* EnterPasscodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314781A25E0112000D5F0E4 /* EnterPasscodeState.swift */; };
-		F314782E25E0112100D5F0E4 /* PasscodeLockType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314781C25E0112000D5F0E4 /* PasscodeLockType.swift */; };
-		F314782F25E0112100D5F0E4 /* PasscodeLockConfigurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314781D25E0112000D5F0E4 /* PasscodeLockConfigurationType.swift */; };
-		F314783025E0112100D5F0E4 /* PasscodeRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314781E25E0112000D5F0E4 /* PasscodeRepositoryType.swift */; };
-		F314783125E0112100D5F0E4 /* PasscodeLockStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314781F25E0112000D5F0E4 /* PasscodeLockStateType.swift */; };
-		F314783225E0112100D5F0E4 /* PasscodeLockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F314782125E0112000D5F0E4 /* PasscodeLockView.xib */; };
-		F314783325E0112100D5F0E4 /* PasscodeSignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314782225E0112000D5F0E4 /* PasscodeSignButton.swift */; };
-		F314783425E0112100D5F0E4 /* PasscodeSignPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314782325E0112000D5F0E4 /* PasscodeSignPlaceholderView.swift */; };
-		F314783525E0112100D5F0E4 /* PasscodeLockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314782425E0112000D5F0E4 /* PasscodeLockPresenter.swift */; };
-		F314783625E0112100D5F0E4 /* PasscodeLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314782525E0112000D5F0E4 /* PasscodeLockViewController.swift */; };
 		F3685B9225DC0B5F008E8894 /* CalculatorButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3685B9125DC0B5F008E8894 /* CalculatorButtonView.swift */; };
 		F3685B9625DC0D80008E8894 /* CalculatorButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3685B9525DC0D80008E8894 /* CalculatorButtonItem.swift */; };
 		F3685B9D25DC1392008E8894 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3685B9C25DC1392008E8894 /* CalculatorModel.swift */; };
 		F3685BA025DC13B1008E8894 /* CalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3685B9F25DC13B1008E8894 /* CalculatorLogic.swift */; };
 		F3685BA425DC144A008E8894 /* CalculatorPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3685BA325DC144A008E8894 /* CalculatorPad.swift */; };
-		F370913025DD0D0000BD471A /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370912F25DD0D0000BD471A /* PurchaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F305E6FA25DBA8970073964F /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F305E6FD25DBA8970073964F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F305E6FF25DBA8970073964F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F305E70125DBA8970073964F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F305E70125DBA8970073964F /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		F305E70325DBA89A0073964F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F305E70625DBA89A0073964F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F305E70925DBA89A0073964F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F305E70B25DBA89A0073964F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F305E71525DBBD1C0073964F /* CalculatorButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonStyle.swift; sourceTree = "<group>"; };
-		F314781325E0112000D5F0E4 /* UserDefaultsPasscodeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPasscodeRepository.swift; sourceTree = "<group>"; };
-		F314781425E0112000D5F0E4 /* ConfirmPasscodeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPasscodeState.swift; sourceTree = "<group>"; };
-		F314781525E0112000D5F0E4 /* PasscodeLockConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockConfiguration.swift; sourceTree = "<group>"; };
-		F314781625E0112000D5F0E4 /* ChangePasscodeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasscodeState.swift; sourceTree = "<group>"; };
-		F314781725E0112000D5F0E4 /* RemovePasscodeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemovePasscodeState.swift; sourceTree = "<group>"; };
-		F314781825E0112000D5F0E4 /* SetPasscodeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPasscodeState.swift; sourceTree = "<group>"; };
-		F314781925E0112000D5F0E4 /* PasscodeLock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLock.swift; sourceTree = "<group>"; };
-		F314781A25E0112000D5F0E4 /* EnterPasscodeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPasscodeState.swift; sourceTree = "<group>"; };
-		F314781C25E0112000D5F0E4 /* PasscodeLockType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockType.swift; sourceTree = "<group>"; };
-		F314781D25E0112000D5F0E4 /* PasscodeLockConfigurationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockConfigurationType.swift; sourceTree = "<group>"; };
-		F314781E25E0112000D5F0E4 /* PasscodeRepositoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeRepositoryType.swift; sourceTree = "<group>"; };
-		F314781F25E0112000D5F0E4 /* PasscodeLockStateType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockStateType.swift; sourceTree = "<group>"; };
-		F314782125E0112000D5F0E4 /* PasscodeLockView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeLockView.xib; sourceTree = "<group>"; };
-		F314782225E0112000D5F0E4 /* PasscodeSignButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeSignButton.swift; sourceTree = "<group>"; };
-		F314782325E0112000D5F0E4 /* PasscodeSignPlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeSignPlaceholderView.swift; sourceTree = "<group>"; };
-		F314782425E0112000D5F0E4 /* PasscodeLockPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockPresenter.swift; sourceTree = "<group>"; };
-		F314782525E0112000D5F0E4 /* PasscodeLockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockViewController.swift; sourceTree = "<group>"; };
 		F3685B9125DC0B5F008E8894 /* CalculatorButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonView.swift; sourceTree = "<group>"; };
 		F3685B9525DC0D80008E8894 /* CalculatorButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonItem.swift; sourceTree = "<group>"; };
 		F3685B9C25DC1392008E8894 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		F3685B9F25DC13B1008E8894 /* CalculatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLogic.swift; sourceTree = "<group>"; };
 		F3685BA325DC144A008E8894 /* CalculatorPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorPad.swift; sourceTree = "<group>"; };
-		F370912F25DD0D0000BD471A /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,17 +66,9 @@
 		F305E6FC25DBA8970073964F /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				F314781025E0112000D5F0E4 /* Passcode */,
 				F3C4963D25DC5C6B00FDDB50 /* Model */,
 				F3C4963C25DC5C5900FDDB50 /* View */,
-				F305E6FD25DBA8970073964F /* AppDelegate.swift */,
-				F305E6FF25DBA8970073964F /* SceneDelegate.swift */,
-				F305E70125DBA8970073964F /* ContentView.swift */,
-				F370912F25DD0D0000BD471A /* PurchaseView.swift */,
-				F305E70325DBA89A0073964F /* Assets.xcassets */,
-				F305E70825DBA89A0073964F /* LaunchScreen.storyboard */,
-				F305E70B25DBA89A0073964F /* Info.plist */,
-				F305E70525DBA89A0073964F /* Preview Content */,
+				F3BD20A225E66DED00731F9B /* Resources */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -127,60 +81,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		F314781025E0112000D5F0E4 /* Passcode */ = {
+		F3BD20A225E66DED00731F9B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F314781125E0112000D5F0E4 /* Modal */,
-				F314782025E0112000D5F0E4 /* Views */,
+				F305E6FD25DBA8970073964F /* AppDelegate.swift */,
+				F305E6FF25DBA8970073964F /* SceneDelegate.swift */,
+				F305E70B25DBA89A0073964F /* Info.plist */,
+				F305E70325DBA89A0073964F /* Assets.xcassets */,
+				F305E70525DBA89A0073964F /* Preview Content */,
 			);
-			path = Passcode;
-			sourceTree = "<group>";
-		};
-		F314781125E0112000D5F0E4 /* Modal */ = {
-			isa = PBXGroup;
-			children = (
-				F314781225E0112000D5F0E4 /* DataTypes */,
-				F314781B25E0112000D5F0E4 /* Protocols */,
-			);
-			path = Modal;
-			sourceTree = "<group>";
-		};
-		F314781225E0112000D5F0E4 /* DataTypes */ = {
-			isa = PBXGroup;
-			children = (
-				F314781325E0112000D5F0E4 /* UserDefaultsPasscodeRepository.swift */,
-				F314781425E0112000D5F0E4 /* ConfirmPasscodeState.swift */,
-				F314781525E0112000D5F0E4 /* PasscodeLockConfiguration.swift */,
-				F314781625E0112000D5F0E4 /* ChangePasscodeState.swift */,
-				F314781725E0112000D5F0E4 /* RemovePasscodeState.swift */,
-				F314781825E0112000D5F0E4 /* SetPasscodeState.swift */,
-				F314781925E0112000D5F0E4 /* PasscodeLock.swift */,
-				F314781A25E0112000D5F0E4 /* EnterPasscodeState.swift */,
-			);
-			path = DataTypes;
-			sourceTree = "<group>";
-		};
-		F314781B25E0112000D5F0E4 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				F314781C25E0112000D5F0E4 /* PasscodeLockType.swift */,
-				F314781D25E0112000D5F0E4 /* PasscodeLockConfigurationType.swift */,
-				F314781E25E0112000D5F0E4 /* PasscodeRepositoryType.swift */,
-				F314781F25E0112000D5F0E4 /* PasscodeLockStateType.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		F314782025E0112000D5F0E4 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				F314782125E0112000D5F0E4 /* PasscodeLockView.xib */,
-				F314782225E0112000D5F0E4 /* PasscodeSignButton.swift */,
-				F314782325E0112000D5F0E4 /* PasscodeSignPlaceholderView.swift */,
-				F314782425E0112000D5F0E4 /* PasscodeLockPresenter.swift */,
-				F314782525E0112000D5F0E4 /* PasscodeLockViewController.swift */,
-			);
-			path = Views;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		F3C4963C25DC5C5900FDDB50 /* View */ = {
@@ -189,6 +99,7 @@
 				F3685BA325DC144A008E8894 /* CalculatorPad.swift */,
 				F3685B9125DC0B5F008E8894 /* CalculatorButtonView.swift */,
 				F305E71525DBBD1C0073964F /* CalculatorButtonStyle.swift */,
+				F305E70125DBA8970073964F /* CalculatorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,10 +171,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F305E70A25DBA89A0073964F /* LaunchScreen.storyboard in Resources */,
 				F305E70725DBA89A0073964F /* Preview Assets.xcassets in Resources */,
 				F305E70425DBA89A0073964F /* Assets.xcassets in Resources */,
-				F314783225E0112100D5F0E4 /* PasscodeLockView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,47 +183,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F314782D25E0112100D5F0E4 /* EnterPasscodeState.swift in Sources */,
-				F314782B25E0112100D5F0E4 /* SetPasscodeState.swift in Sources */,
 				F305E6FE25DBA8970073964F /* AppDelegate.swift in Sources */,
-				F314783325E0112100D5F0E4 /* PasscodeSignButton.swift in Sources */,
-				F314782C25E0112100D5F0E4 /* PasscodeLock.swift in Sources */,
 				F3685B9625DC0D80008E8894 /* CalculatorButtonItem.swift in Sources */,
 				F3685BA025DC13B1008E8894 /* CalculatorLogic.swift in Sources */,
-				F314783425E0112100D5F0E4 /* PasscodeSignPlaceholderView.swift in Sources */,
-				F314782A25E0112100D5F0E4 /* RemovePasscodeState.swift in Sources */,
-				F314782F25E0112100D5F0E4 /* PasscodeLockConfigurationType.swift in Sources */,
-				F314782925E0112100D5F0E4 /* ChangePasscodeState.swift in Sources */,
-				F314782E25E0112100D5F0E4 /* PasscodeLockType.swift in Sources */,
-				F370913025DD0D0000BD471A /* PurchaseView.swift in Sources */,
 				F3685BA425DC144A008E8894 /* CalculatorPad.swift in Sources */,
-				F314782625E0112000D5F0E4 /* UserDefaultsPasscodeRepository.swift in Sources */,
-				F314783025E0112100D5F0E4 /* PasscodeRepositoryType.swift in Sources */,
 				F305E70025DBA8970073964F /* SceneDelegate.swift in Sources */,
 				F3685B9D25DC1392008E8894 /* CalculatorModel.swift in Sources */,
-				F314783125E0112100D5F0E4 /* PasscodeLockStateType.swift in Sources */,
-				F314782825E0112100D5F0E4 /* PasscodeLockConfiguration.swift in Sources */,
-				F314783625E0112100D5F0E4 /* PasscodeLockViewController.swift in Sources */,
-				F305E70225DBA8970073964F /* ContentView.swift in Sources */,
-				F314783525E0112100D5F0E4 /* PasscodeLockPresenter.swift in Sources */,
+				F305E70225DBA8970073964F /* CalculatorView.swift in Sources */,
 				F305E71625DBBD1C0073964F /* CalculatorButtonStyle.swift in Sources */,
-				F314782725E0112100D5F0E4 /* ConfirmPasscodeState.swift in Sources */,
 				F3685B9225DC0B5F008E8894 /* CalculatorButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		F305E70825DBA89A0073964F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F305E70925DBA89A0073964F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F305E70C25DBA89A0073964F /* Debug */ = {
@@ -439,10 +320,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = WXV9WLK4Q4;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Calculator/Info.plist;
+				INFOPLIST_FILE = Calculator/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,10 +341,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = WXV9WLK4Q4;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Calculator/Info.plist;
+				INFOPLIST_FILE = Calculator/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
